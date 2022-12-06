@@ -1,1 +1,81 @@
-/*# sourceMappingURL=style.css.map */
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 945px;
+  margin: 0 auto;
+}
+
+header {
+  justify-content: center;
+}
+header .navigation {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #828282;
+}
+header .navigation .tab {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-top: 33px;
+  padding-bottom: 33px;
+}
+header .navigation .tab a {
+  color: #828282;
+  font-family: "Gilroy-Bold";
+  font-size: 18px;
+  line-height: 22px;
+}
+header .navigation .tab:first-child a {
+  color: #070707;
+}
+
+.main-info {
+  display: flex;
+}
+.main-info .column {
+  flex-basis: 33.3%;
+}
+.main-info .h1div {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.main-info .important-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-info .lang {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.main-info .lang p {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  transform: rotate(-180deg);
+}
+
+.image-main {
+  background-image: url(images/мужик.jpg);
+}
+
+@media screen and (max-width: 970px) {
+  .navigation {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
