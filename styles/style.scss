@@ -1,0 +1,165 @@
+$gilroy-bold: 'Gilroy-Bold', sans-serif;
+$gilroy-medium: 'Gilroy-Medium', sans-serif;
+$font-size-18: 18px;
+$font-size-34: 34px;
+$line-height-normal: 20px;
+
+@mixin style-normal {
+    font-size: 18px;
+    font-family: 'Gilroy-Medium', sans-serif;
+    line-height: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+h2 {
+    font-family: $gilroy-bold;
+    font-size: 34px;
+    line-height: 42px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+.container {
+    max-width: 945px;
+    margin: 0 auto;
+}
+
+header {
+    font-size: $font-size-18;
+    font-family: $gilroy-bold;
+    justify-content: center;
+
+    .navigation {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #828282;
+
+        .tab {
+            height: fit-content;
+            width: fit-content;
+            padding-top: 33px;
+            padding-bottom: 33px;
+
+            a {
+                color: #828282;
+                font-family: 'Gilroy-Bold';
+                font-size: 18px;
+                line-height: 22px;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+
+        .tab:first-child a {
+            color: #070707;
+        }
+    }
+}
+
+
+
+.main-info {
+    margin-bottom: 30px;
+    display: flex;
+
+    .column {
+        flex-basis: 33.3%;
+    }
+
+    .h1div {
+        font-size: 47px;
+        font-family: $gilroy-bold;
+        line-height: 59px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .important-info {
+        @include style-normal;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .lang {
+        font-size: 16px;
+        font-family: $gilroy-bold;
+        line-height: 20px;
+        display: flex;
+        justify-content: end;
+        align-items: flex-end;
+
+        p {
+            writing-mode: vertical-lr;
+            transform: rotate(-180deg);
+
+            a {
+                //transition: color 9999999s;
+                color: #828282;
+            }
+
+            a:active {
+                color: #000;
+                transition: color 0s;
+            }
+        }
+    }
+}
+
+
+
+.image-main {
+    background-image: url(../images/man.jpg);
+    background-position: center center;
+    background-size: cover;
+    max-width: 945px;
+    height: 367px;
+    margin-bottom: 225px;
+}
+
+
+
+.about-me {
+    max-width: 100%;
+    background-color: #f6f6f6;
+    padding: 181px 0 107px;
+    margin-bottom: 91px;
+
+    .info-about-me {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        height: 218px;
+        justify-content: space-between;
+
+        p {
+            @include style-normal;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 970px) {
+    .navigation {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
